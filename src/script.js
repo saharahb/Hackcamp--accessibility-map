@@ -1,6 +1,7 @@
 function initMap() {
+    var vancouverCoords = { lat: 49.2827, lng: -123.1207 };
     var map = new google.maps.Map(document.getElementById('map'), {
-      center: { lat: -34.397, lng: 150.644 },
-      zoom: 8
+      center: vancouverCoords,
+      zoom: 12  // Adjust the zoom level as needed
     });
   }

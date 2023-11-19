@@ -1,3 +1,6 @@
 #map {
-    height: 400px;
-  }
+  height: 600px;
+  width: 600px;
+  border-radius: 10px; /* Adjust the border-radius as needed */
+  overflow: hidden; /* Ensure the map stays within the rounded container */
+}
