@@ -7,5 +7,18 @@ window.initAutocomplete = function () {
         zoom: 12,
         mapTypeId: "terrain",
     });
-}
 
+  map.addListener('click', function(event) {
+    handleMapClick(event.latLng, map);
+  });
+  
+function handleMapClick(latLng, map) {
+    var accessibilityData = "Accessibility Information Here";
+    var infoWindow = new google.maps.InfoWindow({
+      content: accessibilityData
+    });
+    infoWindow.setPosition(latLng);
+    infoWindow.open(map);
+  }
+
+}
