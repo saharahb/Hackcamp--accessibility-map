@@ -21,15 +21,16 @@ window.initAutocomplete = async function () {
 
     // Google maps element
     let map_element = document.getElementById("map");
-    let map = new google.maps.Map(map_element, {
+    map = new google.maps.Map(map_element, {
         center: { lat: 49.246292, lng: -123.116226 },
         zoom: 12,
+        clickableIcons: false,
         mapTypeId: "terrain",
     });
 
     // Search bar element
     let search_bar = document.getElementById("search_bar");
-    let search_box = new google.maps.places.SearchBox(search_bar);
+    search_box = new google.maps.places.SearchBox(search_bar);
 
     // Search for places nearby where the map currently is
     map.addListener("bounds_changed", () => {
